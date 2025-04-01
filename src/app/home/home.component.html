@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Care Connect</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+   
+    <div class="container">
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="#">X Hospitals</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <button  (click)="login()">Login</button>
+                <button>Register</button>
+                
+            </ul>
+
+        </div>
+    </nav>
+  
+
+<section class="home" id="Home">
+    <div class="about">
+        <h4> Hospital X,</h4>
+        <p> We are dedicated to providing exceptional healthcare services to our community. With a focus on patient-centered care, cutting-edge technology, and a compassionate team of healthcare professionals, we strive to be the premier healthcare provider in the region.
+        </p>
+
+    </div>
+
+</section>
+    </div>
+    <section class="vision">
+        <div class="container2">
+            <div class="mission">
+            <h4> Our Mission</h4>
+            <p>At Hospital X, our mission is to improve the health and well-being of our community through compassionate, patient-centered care. We strive for excellence in all that we do, maintaining the highest standards of integrity. Our commitment is to provide exceptional healthcare services that prioritize the needs and dignity of every individual.
+            </div>
+            <div class="vision">
+                <h4>Our Vision</h4>
+                <p>To be the healthcare provider of choice, recognized for our commitment to quality, safety, and exceptional patient experiences.</p>
+            </div>
+        </div>
+    </section >
+    <section class="doclist" >
+
+        <div class="topic"><h4 class="doc">Our Doctors</h4></div>
+        <div class="doctor-list ">
+         
+          
+            <div *ngFor="let doctor of doctors" class="box">
+                <img [src]="imageUrl" >
+                <h3>{{ doctor.docname }}</h3>
+                <p>{{ doctor.specialist }}</p>
+                <button (click)="selectDoctor(doctor.doc_id)">Appointment</button>
+              </div>
+             
+              
+        </div>
+    </section>
+    <section class="services" st>
+        <div class="service">
+            <div class="boxx">
+                <img [src]="service" alt="Description of the image">
+            </div>
+            <div class="ser" style="height: 101vh;">
+                <h4> Our Services</h4>
+                <p>Immediate 24/7 services for critical medical needs.
+                    Ensuring rapid response to urgent health situations.
+                    Providing expert care in life-threatening emergencies.
+                     </p>
+                <p>Providing advanced treatments in specialized fields such as surgery, oncology, cardiology, and more. Offering personalized care plans tailored to each patient's needs. Ensuring access to cutting-edge technologies and therapies for optimal outcomes. Delivering compassionate care and support throughout the treatment journey. </p>
+               
+                </div>
+        </div>
+
+    </section>
+    <section class="contact">
+        <div class="contact" >
+            <div class="for">
+                <h4> Contact</h4>
+                <div class="in">
+                    <input type="email"  id="email" placeholder="Email ID" required  name="email"> 
+                  </div>
+                  <div class="in">
+                    <input type="phone"  id="phone" placeholder="Phone" required  name="Phone"> 
+                  </div>
+                  <div class="inn">
+                    <h1>Address</h1> 
+                    <p>Greenwood Memorial Hospital,123 Main Street</p>
+                        <p>Springfield, Anytown 56789,</p>  
+                        <p>United States,PH:123456789 </p>
+                        
+                  </div>
+
+            </div>
+        </div>
+    </section>
+   
+
+</body>
+</html>
