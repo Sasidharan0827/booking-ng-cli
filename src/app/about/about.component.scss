@@ -1,0 +1,50 @@
+* {
+  text-decoration: none;
+  font-family: "Gellix-Regular", sans-serif;
+}
+.background_filter {
+  backdrop-filter: blur(10px);
+}
+
+.logo a {
+  color: white;
+}
+.li_style_none {
+  list-style: none;
+}
+li a {
+  color: white;
+
+  font-weight: bold;
+}
+button {
+  font-size: 14px;
+  font-weight: bold;
+
+  border-radius: 10px;
+
+  width: 100px;
+  outline: none;
+  background: #fff;
+  border: none;
+  outline: none;
+}
+button:hover {
+  background: #fff;
+  color: black;
+}
+
+.section_main {
+  background-image: url("../../assets/img5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about h4 {
+  font-size: 80px;
+  color: #fff;
+}
+.about p {
+  color: #fff;
+  font-size: 30px;
+}

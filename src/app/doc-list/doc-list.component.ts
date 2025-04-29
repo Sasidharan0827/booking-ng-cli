@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { DoctorService } from '../doctor.service';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-doc-list',
+  templateUrl: './doc-list.component.html',
+  styleUrls: ['./doc-list.component.scss'],
 })
-export class HomeComponent {
+export class DocListComponent {
   imageUrl = '/assets/doc2.jpg';
   service = '/assets/service.jpg';
 
@@ -65,8 +65,5 @@ export class HomeComponent {
         console.error('Failed to select doctor:', error);
       },
     });
-  }
-  login() {
-    this.router.navigate(['/sign-in']);
   }
 }

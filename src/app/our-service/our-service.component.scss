@@ -1,0 +1,22 @@
+* {
+  text-decoration: none;
+  font-family: "Gellix-Regular", sans-serif;
+  color: white;
+}
+.service {
+  background: url("../../assets/img2.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0%;
+}
+
+.boxx img {
+  width: 95%;
+}
+.ser h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 80px;
+}

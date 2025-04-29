@@ -1,5 +1,434 @@
-/* You can add global styles to this file, and also import other style files */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;}
+@font-face {
+  font-family: "Gellix-Regular";
+  src: url("../src/assets/Gellix-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gellix-Regular", sans-serif;
+}
+
+.font_color_white {
+  color: white;
+}
+.p-accordioncontent-content {
+  border: 0 !important;
+}
+.form_inputbox {
+  border: none;
+  border-bottom: 2px solid #6c6c6c;
+  background: none !important;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+.form_inputbox:focus {
+  outline: none !important;
+}
+.form_inputbox::placeholder {
+  color: #999393;
+}
+.checkbox_size {
+  height: 30px;
+  width: 30px;
+}
+.btn_bg_none {
+  background: none !important;
+  outline: none !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+}
+.font_style_2 {
+  font-family: "getaway";
+}
+
+.button_unset {
+  all: unset;
+}
+.border_radius_5 {
+  border-radius: 5px;
+}
+.border_radius_10 {
+  border-radius: 10px;
+}
+.border_radius_20 {
+  border-radius: 20px;
+}
+.img_contain {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.img_cover {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text_decoration {
+  text-decoration: underline;
+}
+
+// font-size
+.font_size_1 {
+  font-size: clamp(0.5px, 0.25vw, 1px);
+}
+.font_size_2 {
+  font-size: clamp(1px, 0.5vw, 2px);
+}
+.font_size_3 {
+  font-size: clamp(1.5px, 0.75vw, 3px);
+}
+.font_size_4 {
+  font-size: clamp(2px, 1vw, 4px);
+}
+.font_size_5 {
+  font-size: clamp(2.5px, 1.25vw, 5px);
+}
+.font_size_6 {
+  font-size: clamp(3px, 1.5vw, 6px);
+}
+.font_size_7 {
+  font-size: clamp(3.5px, 1.75vw, 7px);
+}
+.font_size_8 {
+  font-size: clamp(4px, 2vw, 8px);
+}
+.font_size_9 {
+  font-size: clamp(4.5px, 2.25vw, 9px);
+}
+.font_size_10 {
+  font-size: clamp(5px, 2.5vw, 10px);
+}
+.font_size_11 {
+  font-size: clamp(5.5px, 2.75vw, 11px);
+}
+.font_size_12 {
+  font-size: clamp(6px, 3vw, 12px);
+}
+.font_size_13 {
+  font-size: clamp(6.5px, 3.25vw, 13px);
+}
+.font_size_14 {
+  font-size: clamp(10px, 3.5vw, 14px);
+}
+.font_size_15 {
+  font-size: clamp(7.5px, 3.75vw, 15px);
+}
+.font_size_16 {
+  font-size: clamp(8px, 4vw, 16px);
+}
+.font_size_17 {
+  font-size: clamp(8.5px, 4.25vw, 17px);
+}
+.font_size_18 {
+  font-size: clamp(9px, 4.5vw, 18px);
+}
+.font_size_19 {
+  font-size: clamp(9.5px, 4.75vw, 19px);
+}
+.font_size_20 {
+  font-size: clamp(16px, 5vw, 20px);
+}
+.font_size_21 {
+  font-size: clamp(10.5px, 5.25vw, 21px);
+}
+.font_size_22 {
+  font-size: clamp(11px, 5.5vw, 22px);
+}
+.font_size_23 {
+  font-size: clamp(11.5px, 5.75vw, 23px);
+}
+.font_size_24 {
+  font-size: clamp(12px, 4vw, 24px);
+}
+.font_size_25 {
+  font-size: clamp(12.5px, 6.25vw, 25px);
+}
+.font_size_26 {
+  font-size: clamp(13px, 6.5vw, 26px);
+}
+.font_size_27 {
+  font-size: clamp(13.5px, 6.75vw, 27px);
+}
+.font_size_28 {
+  font-size: clamp(14px, 5vw, 28px);
+}
+.font_size_29 {
+  font-size: clamp(14.5px, 7.25vw, 29px);
+}
+.font_size_30 {
+  font-size: clamp(15px, 3vw, 30px);
+}
+.font_size_31 {
+  font-size: clamp(15.5px, 7.75vw, 31px);
+}
+.font_size_32 {
+  font-size: clamp(16px, 8vw, 32px);
+}
+.font_size_33 {
+  font-size: clamp(16.5px, 8.25vw, 33px);
+}
+.font_size_34 {
+  font-size: clamp(17px, 8.5vw, 34px);
+}
+.font_size_35 {
+  font-size: clamp(17.5px, 8.75vw, 35px);
+}
+.font_size_36 {
+  font-size: clamp(18px, 9vw, 36px);
+}
+.font_size_37 {
+  font-size: clamp(18.5px, 9.25vw, 37px);
+}
+.font_size_38 {
+  font-size: clamp(19px, 9.5vw, 38px);
+}
+.font_size_39 {
+  font-size: clamp(19.5px, 9.75vw, 39px);
+}
+.font_size_40 {
+  font-size: clamp(20px, 8vw, 40px);
+}
+.font_size_41 {
+  font-size: clamp(20.5px, 10.25vw, 41px);
+}
+.font_size_42 {
+  font-size: clamp(21px, 10.5vw, 42px);
+}
+.font_size_43 {
+  font-size: clamp(21.5px, 10.75vw, 43px);
+}
+.font_size_44 {
+  font-size: clamp(22px, 11vw, 44px);
+}
+.font_size_45 {
+  font-size: clamp(22.5px, 11.25vw, 45px);
+}
+.font_size_46 {
+  font-size: clamp(23px, 11.5vw, 46px);
+}
+.font_size_47 {
+  font-size: clamp(23.5px, 11.75vw, 47px);
+}
+.font_size_48 {
+  font-size: clamp(24px, 12vw, 48px);
+}
+.font_size_49 {
+  font-size: clamp(24.5px, 12.25vw, 49px);
+}
+.font_size_50 {
+  font-size: clamp(24px, 8vw, 50px);
+}
+.font_size_51 {
+  font-size: clamp(25.5px, 12.75vw, 51px);
+}
+.font_size_52 {
+  font-size: clamp(26px, 13vw, 52px);
+}
+.font_size_53 {
+  font-size: clamp(26.5px, 13.25vw, 53px);
+}
+.font_size_54 {
+  font-size: clamp(27px, 13.5vw, 54px);
+}
+.font_size_55 {
+  font-size: clamp(27.5px, 13.75vw, 55px);
+}
+.font_size_56 {
+  font-size: clamp(28px, 14vw, 56px);
+}
+.font_size_57 {
+  font-size: clamp(28.5px, 14.25vw, 57px);
+}
+.font_size_58 {
+  font-size: clamp(29px, 14.5vw, 58px);
+}
+.font_size_59 {
+  font-size: clamp(29.5px, 14.75vw, 59px);
+}
+.font_size_60 {
+  font-size: clamp(24px, 5vw, 60px);
+}
+.font_size_61 {
+  font-size: clamp(24px, 15.25vw, 61px);
+}
+.font_size_62 {
+  font-size: clamp(31px, 15.5vw, 62px);
+}
+.font_size_63 {
+  font-size: clamp(31.5px, 15.75vw, 63px);
+}
+.font_size_64 {
+  font-size: clamp(32px, 16vw, 64px);
+}
+.font_size_65 {
+  font-size: clamp(32.5px, 16.25vw, 65px);
+}
+.font_size_66 {
+  font-size: clamp(33px, 16.5vw, 66px);
+}
+.font_size_67 {
+  font-size: clamp(33.5px, 16.75vw, 67px);
+}
+.font_size_68 {
+  font-size: clamp(34px, 17vw, 68px);
+}
+.font_size_69 {
+  font-size: clamp(34.5px, 17.25vw, 69px);
+}
+.font_size_70 {
+  font-size: clamp(35px, 17.5vw, 70px);
+}
+.font_size_71 {
+  font-size: clamp(35.5px, 17.75vw, 71px);
+}
+.font_size_72 {
+  font-size: clamp(36px, 18vw, 72px);
+}
+.font_size_73 {
+  font-size: clamp(36.5px, 18.25vw, 73px);
+}
+.font_size_74 {
+  font-size: clamp(37px, 18.5vw, 74px);
+}
+.font_size_75 {
+  font-size: clamp(37.5px, 18.75vw, 75px);
+}
+.font_size_76 {
+  font-size: clamp(38px, 19vw, 76px);
+}
+.font_size_77 {
+  font-size: clamp(38.5px, 19.25vw, 77px);
+}
+.font_size_78 {
+  font-size: clamp(39px, 19.5vw, 78px);
+}
+.font_size_79 {
+  font-size: clamp(39.5px, 19.75vw, 79px);
+}
+.font_size_80 {
+  font-size: clamp(32px, 7vw, 80px) !important;
+}
+.font_size_81 {
+  font-size: clamp(40.5px, 20.25vw, 81px);
+}
+.font_size_82 {
+  font-size: clamp(41px, 20.5vw, 82px);
+}
+.font_size_83 {
+  font-size: clamp(41.5px, 20.75vw, 83px);
+}
+.font_size_84 {
+  font-size: clamp(42px, 21vw, 84px);
+}
+.font_size_85 {
+  font-size: clamp(42.5px, 21.25vw, 85px);
+}
+.font_size_86 {
+  font-size: clamp(43px, 21.5vw, 86px);
+}
+.font_size_87 {
+  font-size: clamp(43.5px, 21.75vw, 87px);
+}
+.font_size_88 {
+  font-size: clamp(44px, 22vw, 88px);
+}
+.font_size_89 {
+  font-size: clamp(44.5px, 22.25vw, 89px);
+}
+.font_size_90 {
+  font-size: clamp(45px, 22.5vw, 90px);
+}
+.font_size_91 {
+  font-size: clamp(45.5px, 22.75vw, 91px);
+}
+.font_size_92 {
+  font-size: clamp(46px, 23vw, 92px);
+}
+.font_size_93 {
+  font-size: clamp(46.5px, 23.25vw, 93px);
+}
+.font_size_94 {
+  font-size: clamp(47px, 23.5vw, 94px);
+}
+.font_size_95 {
+  font-size: clamp(47.5px, 23.75vw, 95px);
+}
+.font_size_96 {
+  font-size: clamp(48px, 24vw, 96px);
+}
+.font_size_97 {
+  font-size: clamp(48.5px, 24.25vw, 97px);
+}
+.font_size_98 {
+  font-size: clamp(49px, 24.5vw, 98px);
+}
+.font_size_99 {
+  font-size: clamp(49.5px, 24.75vw, 99px);
+}
+.font_size_100 {
+  font-size: clamp(50px, 25vw, 100px);
+}
+
+// font-weight
+.font_weight_100 {
+  font-weight: 100;
+}
+.font_weight_200 {
+  font-weight: 200;
+}
+.font_weight_300 {
+  font-weight: 300;
+}
+.font_weight_400 {
+  font-weight: 400;
+}
+.font_weight_500 {
+  font-weight: 500;
+}
+.font_weight_600 {
+  font-weight: 600;
+}
+.font_weight_700 {
+  font-weight: 700;
+}
+.font_weight_800 {
+  font-weight: 800;
+}
+.font_weight_900 {
+  font-weight: 900;
+}
+.font_weight_1000 {
+  font-weight: 1000;
+}
+.font_weight_1100 {
+  font-weight: 1100;
+}
+
+.font_weight_1200 {
+  font-weight: 1200;
+}
+.font_weight_1300 {
+  font-weight: 1300;
+}
+.font_weight_1400 {
+  font-weight: 1400;
+}
+.font_weight_1500 {
+  font-weight: 1500;
+}
+.font_weight_bold {
+  font-weight: bold;
+}
+.font_weight_bolder {
+  font-weight: bolder;
+}
+.font_weight_ighter {
+  font-weight: lighter;
+}

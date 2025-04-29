@@ -1,472 +1,217 @@
-@import url("https://fonts.googleapis.com/css2? family=Poppins:wght@300;400;500;600;700;800;900& display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins",sans-serif;
-    text-decoration: none;
+* {
+  text-decoration: none;
+  font-family: "Gellix-Regular", sans-serif;
 }
 
-.navbar{
-    background:transparent;
-    padding-right: 15px;
-    padding-left: 15px;
-   padding-top: 30px;
+.ser p {
+  color: #fff;
 }
-.navdiv{
-   
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
+.contact {
+  background: url("../../assets/img7.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0%;
 }
-.logo a{
-    font-size: 35px;
-    font-weight: 600;
-    color:white;
-}
-li{
-    list-style: none;
-    display: inline-block;
-}
-li a{
-    color:white ;
-    font-size: 25px;
-    font-weight: bold;
-    margin-right: 25px;
-
-}
-button{
-  
-  font-size: 14px; 
-  font-weight: bold; 
-  
-    margin-left: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 100px;
-    outline: none;
-    background: #fff;
-    border: none;
-    outline: none;
-}
-button:hover{
-  background: #fff;
-  color: black;
-
-}
-
-.container{
-    min-height: 100vh;
-    background:url('../../assets/img5.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-   
-}
-.about h4{
-    display: flex;
-    align-items: center;
-    justify-content:right;
-    padding-top: 200px;
-    padding-right: 350px;
-    font-size: 80px;
-    color: #fff;
-}
-.about p{
-    padding-top: 30px;
-    color: #fff;
-    padding-left:750px ;
-    padding-right: 70px;
-    font-size:30px ;
-
-}
-.container2{
-    min-height: 100vh;
-    background:url('../../assets/img2.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-
-}
-.mission h4{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    color: #fff;
-    font-size: 80px;
-    padding-top: 50px;
-    padding-right: 300px;
-    
-}
-.mission p{
-    color: #fff;
-    font-size: 30px;
-    padding-left: 750px;
-    padding-right: 70px;
-    padding-top: 20px;
-}
-.vision h4{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    color: #fff;
-    font-size: 80px;
-    padding-top: 50px;
-    padding-right: 300px;
-
-}
-.vision p{
-    color: #fff;
-    font-size: 30px;
-    padding-left: 750px;
-    padding-right: 70px;
-    padding-top: 20px;
-
-} 
-
-.topic{
-  color: white;
+.for h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   font-size: 80px;
+}
+
+.in input {
+  height: 100%;
   width: 100%;
- 
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
 }
-.topic .doc{
-  text-align: center;
-  padding-top: 50px;
- 
-
-}
-
-
-
-
-.doclist{
-    min-height: 100vh;
-    background:url('../../assets/img6.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-wrap: wrap;
-    
+.inn h1 {
+  color: #fff;
+  font-size: 30px;
 }
 
-.doctor-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
-   
-  }
-  
-  .box {
-    flex: 0 0 15%; 
-    margin-top: 60px;
-  margin-left: 125px;
-    text-align: center;
-    padding-left: 20px; 
-    background:#fff;
-    border-radius: 12px; /* Reduce border radius */
-    border: 1px solid transparent;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transition: all .3s ease;
-    cursor: pointer;
-    max-height: 280px; 
-    backdrop-filter: blur(8px);
-  overflow: hidden; 
-  padding-top: 20px;
-  padding-left: 6px;
-  
-}
-  
-  
-  .box img {
-   
-    max-width: 100%; 
-    max-height: 70%;
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  .box h3{
-    padding-bottom: 0px;
-    color: black;
-  }
-  .box p{
-    margin-top: 0px;
-    padding-top: 0px;
-    color: black;
-  }
-  .box button{
-    background: black;
-   
-    color: white;
-    height: 30px;
-    cursor: pointer;
-   
-    
-  }
-  .box button:hover{
-    background:aqua;
-    color: black;
-    cursor: pointer;
-  }
-  .box button:active{
-    transform: translateY(3px);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  .service{
-    min-height: 100vh;
-    background:url('../../assets/img2.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 0%;
-  }
-  .boxx{
-    width: 50%;
-    float: left;
-  }
-  .boxx img{
-    width: 95%;
-  }
-  .ser h4{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    color: #fff;
-    font-size: 80px;
-    padding-top: 50px;
-    padding-right: 300px;
-    
-}
-.ser p{
-    color: #fff;
-    font-size: 30px;
-    padding-left: 750px;
-    padding-right: 70px;
-    padding-top: 20px;
+/* General Media Queries for Responsiveness */
 
-}
-.contact{
-    height: 100vh;
-    background:url('../../assets/img7.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 0%;
-}
-.for h4{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 80px;
-    padding-top: 50px;
-    padding-right: 270px;
+// /* For tablets (768px and up) */
+// @media (max-width: 1024px) {
+//   .navbar {
+//     flex-direction: column;
+//     align-items: center;
+//   }
 
-}
-.in{
-    padding-left: 800px;
-    padding-top: 30px;
-}
- .in input{
-    width: 80%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255,255,255,.2);
-    border-radius: 40px;
-    font-size: 16px;
-    color:#fff ;
-    padding: 20px 45px 20px 20px;
-    
- }
- .inn h1{
-    color: #fff;
-    font-size: 30px;
-    padding-left: 820px;
-    padding-top: 30px;
- }
- .inn p{
-    color: #fff;
-    font-size: 25px;
-    padding-left: 820px;
-    padding-right: 90px;
-    padding-top: 30px;
- }
+//   .navdiv {
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
 
- /* General Media Queries for Responsiveness */
+//   .logo a {
+//     font-size: 30px;
+//   }
 
-/* For tablets (768px and up) */
-@media (max-width: 1024px) {
-  .navbar {
-      flex-direction: column;
-      align-items: center;
-  }
+//   li a {
+//     font-size: 20px;
+//     margin-right: 15px;
+//   }
 
-  .navdiv {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
+//   button {
+//     width: 90px;
+//     padding: 8px;
+//   }
 
-  .logo a {
-      font-size: 30px;
-  }
+//   .about p {
+//     font-size: 20px;
+//   }
 
-  li a {
-      font-size: 20px;
-      margin-right: 15px;
-  }
+//   .container2,
+//   .doclist,
+//   .services,
+//   .contact {
+//     background-position: center;
+//     background-size: cover;
+//   }
 
-  button {
-      width: 90px;
-      padding: 8px;
-  }
+//   .ser h4,
+//   .mission h4,
+//   .vision h4,
+//   .for h4 {
+//     font-size: 50px;
+//     padding-right: 0;
+//     justify-content: center;
+//   }
 
-  .about h4 {
-      font-size: 60px;
-      padding-right: 50px;
-      padding-left: 20px;
-  }
+//   .ser p,
+//   .mission p,
+//   .vision p,
+//   .inn p {
+//     font-size: 20px;
+//     padding: 0 20px;
+//   }
 
-  .about p {
-      font-size: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-  }
+//   .inn h1 {
+//     padding-left: 20px;
+//   }
+// }
 
-  .container2, .doclist, .services, .contact {
-      background-position: center;
-      background-size: cover;
-  }
+// /* For phones (max-width 768px) */
+// @media (max-width: 768px) {
+//   .navdiv {
+//     flex-direction: column;
+//   }
 
-  .doctor-list .box {
-      flex: 0 0 30%;
-      margin-left: 5%;
-  }
+//   li {
+//     display: block;
+//     margin-bottom: 10px;
+//   }
 
-  .ser h4, .mission h4, .vision h4, .for h4 {
-      font-size: 50px;
-      padding-right: 0;
-      justify-content: center;
-  }
+//   .about h4 {
+//     font-size: 40px;
+//     padding-top: 100px;
+//   }
 
-  .ser p, .mission p, .vision p, .inn p {
-      font-size: 20px;
-      padding: 0 20px;
-  }
+//   .about p {
+//     font-size: 18px;
+//   }
 
-  .inn h1 {
-      padding-left: 20px;
-  }
+//   .doctor-list .box {
+//     flex: 0 0 45%;
+//     margin-left: 5%;
+//   }
 
-  .in input {
-      width: 90%;
-  }
-}
+//   .box button {
+//     width: 80%;
+//   }
 
-/* For phones (max-width 768px) */
-@media (max-width: 768px) {
-  .navdiv {
-      flex-direction: column;
-  }
+//   .ser h4,
+//   .mission h4,
+//   .vision h4 {
+//     font-size: 40px;
+//   }
 
-  li {
-      display: block;
-      margin-bottom: 10px;
-  }
+//   .ser p,
+//   .mission p,
+//   .vision p {
+//     font-size: 16px;
+//   }
 
-  .about h4 {
-      font-size: 40px;
-      padding-top: 100px;
-  }
+//   .inn h1 {
+//     font-size: 20px;
+//   }
 
-  .about p {
-      font-size: 18px;
-  }
+//   .inn p {
+//     font-size: 16px;
+//   }
 
-  .doctor-list .box {
-      flex: 0 0 45%;
-      margin-left: 5%;
-  }
+//   .in input {
+//     padding: 15px;
+//     font-size: 14px;
+//   }
+// }
 
-  .box button {
-      width: 80%;
-  }
+// /* For smaller phones (max-width 480px) */
+// @media (max-width: 480px) {
+//   .logo a {
+//     font-size: 25px;
+//   }
 
-  .ser h4, .mission h4, .vision h4 {
-      font-size: 40px;
-  }
+//   li a {
+//     font-size: 16px;
+//   }
 
-  .ser p, .mission p, .vision p {
-      font-size: 16px;
-  }
+//   button {
+//     width: 80px;
+//     padding: 6px;
+//   }
 
-  .inn h1 {
-      font-size: 20px;
-  }
+//   .about h4 {
+//     font-size: 30px;
+//     padding-right: 0;
+//     text-align: center;
+//   }
 
-  .inn p {
-      font-size: 16px;
-  }
+//   .about p {
+//     font-size: 14px;
+//     padding: 0 10px;
+//   }
 
-  .in input {
-      padding: 15px;
-      font-size: 14px;
-  }
-}
+//   .doctor-list .box {
+//     flex: 0 0 90%;
+//     margin: 5% auto;
+//   }
 
-/* For smaller phones (max-width 480px) */
-@media (max-width: 480px) {
-  .logo a {
-      font-size: 25px;
-  }
+//   .ser h4,
+//   .mission h4,
+//   .vision h4 {
+//     font-size: 30px;
+//     text-align: center;
+//   }
 
-  li a {
-      font-size: 16px;
-  }
+//   .ser p,
+//   .mission p,
+//   .vision p {
+//     font-size: 14px;
+//     padding: 0 10px;
+//   }
 
-  button {
-      width: 80px;
-      padding: 6px;
-  }
+//   .inn h1 {
+//     font-size: 18px;
+//     text-align: center;
+//   }
 
-  .about h4 {
-      font-size: 30px;
-      padding-right: 0;
-      text-align: center;
-  }
+//   .inn p {
+//     font-size: 14px;
+//     text-align: center;
+//   }
 
-  .about p {
-      font-size: 14px;
-      padding: 0 10px;
-  }
-
-  .doctor-list .box {
-      flex: 0 0 90%;
-      margin: 5% auto;
-  }
-
-  .ser h4, .mission h4, .vision h4 {
-      font-size: 30px;
-      text-align: center;
-  }
-
-  .ser p, .mission p, .vision p {
-      font-size: 14px;
-      padding: 0 10px;
-  }
-
-  .inn h1 {
-      font-size: 18px;
-      text-align: center;
-  }
-
-  .inn p {
-      font-size: 14px;
-      text-align: center;
-  }
-
-  .in input {
-      width: 100%;
-      padding: 10px;
-      font-size: 12px;
-  }
-}
+//   .in input {
+//     width: 100%;
+//     padding: 10px;
+//     font-size: 12px;
+//   }
+// }

@@ -1,0 +1,92 @@
+* {
+  text-decoration: none;
+  font-family: "Gellix-Regular", sans-serif;
+}
+
+.topic {
+  color: white;
+  font-size: 80px;
+  width: 100%;
+}
+.topic .doc {
+  text-align: center;
+}
+.doctor_list {
+  background-image: url("../../assets/img6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.doc {
+  font-size: 80px;
+}
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topic {
+  color: white;
+  font-size: 80px;
+  width: 100%;
+}
+.topic .doc {
+  text-align: center;
+}
+.doctor_list {
+  background-image: url("../../assets/img6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.doc {
+  font-size: 80px;
+}
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  flex: 0 0 15%;
+
+  text-align: center;
+
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+}
+
+.box img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box p {
+  margin-top: 0px;
+  padding-top: 0px;
+  color: black;
+}
+.box button {
+  background: black;
+  color: white;
+
+  cursor: pointer;
+}
+.box button:hover {
+  background: rgb(115, 119, 119);
+  color: black;
+  cursor: pointer;
+}
+.box button:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

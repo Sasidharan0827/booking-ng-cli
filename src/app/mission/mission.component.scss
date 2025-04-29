@@ -1,0 +1,32 @@
+* {
+  text-decoration: none;
+  font-family: "Gellix-Regular", sans-serif;
+}
+.vision {
+  background-image: url("../../assets/img2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.mission h4 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #fff;
+  font-size: 80px;
+}
+.mission p {
+  color: #fff;
+  font-size: 30px;
+}
+.vision h4 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #fff;
+  font-size: 80px;
+}
+.vision p {
+  color: #fff;
+  font-size: 30px;
+}

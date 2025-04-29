@@ -1,0 +1,41 @@
+* {
+  text-decoration: none;
+  font-family: "Gellix-Regular", sans-serif;
+  color: white;
+}
+.contact {
+  background: url("../../assets/img7.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0%;
+}
+.for h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 80px;
+}
+
+.in input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.inn h1 {
+  color: #fff;
+  font-size: 30px;
+}
+.in input::placeholder {
+  color: white;
+}
+.background_filter {
+  backdrop-filter: blur(10px);
+}

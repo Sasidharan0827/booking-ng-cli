@@ -1,0 +1,25 @@
+<section class="doctor_list pt-5 pb-5">
+  <div class="topic">
+    <h4 class="doc pb-5" data-aos="flip-down">Our Doctors</h4>
+  </div>
+  <div class="doctor-list row m-0 p-0 gap-5 justify-content-center">
+    <div
+      *ngFor="let doctor of doctors"
+      class="box col-xl-3 col-lg-3 col-md-6 col-sm-12"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom-center"
+    >
+      <img [src]="imageUrl" />
+      <h3>{{ doctor.docname }}</h3>
+      <p>{{ doctor.specalist }}</p>
+      <div class="d-flex align-items-center justify-content-center m-0 p-1">
+        <button
+          (click)="selectDoctor(doctor.doc_id)"
+          class="p-3 m-0 w-75 button_unset border_radius_5"
+        >
+          Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
