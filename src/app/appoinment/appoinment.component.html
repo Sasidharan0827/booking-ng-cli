@@ -1,88 +1,139 @@
-<div class="container">
-  <div class="header-section">
-    <div class="title"> Book Your Appoinment </div>
-    <button class="btn" (click)="onback()" >Back</button>
-  
-  </div>
-
-  <div class="body-section">
-
-    <div class="search-section">
-      
-      <div class="left-side-search-section">
-       
-        <div class="name">
-          <label>User Name:</label>
-         
-          <input type="name" id="name" placeholder="Enter your name" required name="name" [(ngModel)]="formData.name"  placeholder="{{user.user_name}}" readonly> 
-        </div>
-        
-
-        <div class="DOB">
-          <label>User DOB:</label>
-          <input type="DOB" id="DOB" placeholder="Enter your DOB" required name="DOB" [(ngModel)]="formData.dob"  placeholder="{{user.dob}}" readonly>
-          
-        </div>
-        <div class="doctor">
-          <label>Doctor :</label>
-          <input type="doctor" id="doctor" placeholder="Enter your doctor" required name="doctor" [(ngModel)]="formData.docname"   placeholder="{{doctor.docname}}" readonly>
-          
-          
-        </div>
-        <div class="speacilist">
-          <label>Speacilist:</label>
-          <input type="speacilist" id="speacilist" placeholder="Enter your speacilist" required name="speacilist"[(ngModel)]="formData.specalist" placeholder="{{doctor.specalist}}" readonly>
-          
-        </div>
-      
+<section class="appoinment_page d-flex justify-content-center pt-5 pb-5">
+  <div class="container drop_filter border_radius_20">
+    <div class="header-section align-items-center row m-0 p-0">
+      <div
+        class="title d-flex justify-content-lg-end justify-content-sm-center text-center col-xl-8 col-lg-8 col-md-12 col-sm-12"
+      >
+        Book Your Appoinment
       </div>
-      <div class="right-side-search-section">
-        
+      <div
+        class="d-lg-flex justify-content-center col-xl-4 col-lg-4 col-md-4 col-sm-4 d-none"
+      >
+        <button class="btn d-lg-flex d-none" (click)="onback()">Back</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="body-section">
+        <div class="search-section row m-0 p-0">
+          <div
+            class="left-side-search-section col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-5"
+          >
+            <div class="name mt-5 d-flex gap-5 justify-content-center">
+              <label class="font_size_18 d-none d-lg-flex">User Name:</label>
 
-        <div class="date">
-          <label>Date:</label>
-          <input type="date" id="date"  required name="date" [(ngModel)]="formData.date"  (ngModelChange)="findDayOfWeek($event)">
-          
-        </div>
-        <div class="day">
-          <label>Day:</label>
-          <input type="text" id="day" required name="day"[(ngModel)]="dayOfWeek" >
-          
-        </div>
+              <input
+                type="name"
+                id="name"
+                placeholder="Enter your name"
+                required
+                name="name"
+                [(ngModel)]="formData.name"
+                placeholder="{{ user.user_name }}"
+                readonly
+              />
+            </div>
 
-        <div class="session">
+            <div class="DOB mt-5 d-flex gap-5 justify-content-center">
+              <label class="font_size_18 d-none d-lg-flex">User DOB:</label>
+              <input
+                type="DOB"
+                id="DOB"
+                placeholder="Enter your DOB"
+                required
+                name="DOB"
+                [(ngModel)]="formData.dob"
+                placeholder="{{ user.dob }}"
+                readonly
+              />
+            </div>
+            <div class="doctor mt-5 d-flex justify-content-center gap-5">
+              <label class="font_size_18 d-none d-lg-flex">Doctor :</label>
+              <input
+                type="doctor"
+                id="doctor"
+                placeholder="Enter your doctor"
+                required
+                name="doctor"
+                [(ngModel)]="formData.docname"
+                placeholder="{{ doctor.docname }}"
+                readonly
+              />
+            </div>
+            <div class="speacilist mt-5 d-flex gap-5 justify-content-center">
+              <label class="font_size_18 d-none d-lg-flex">Speacilist:</label>
+              <input
+                type="speacilist"
+                id="speacilist"
+                placeholder="Enter your speacilist"
+                required
+                name="speacilist"
+                [(ngModel)]="formData.specalist"
+                placeholder="{{ doctor.specalist }}"
+                readonly
+              />
+            </div>
+          </div>
+          <div
+            class="right-side-search-section col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-5"
+          >
+            <div class="date d-flex gap-5 justify-content-center">
+              <label class="font_size_18 d-none d-lg-flex">Date:</label>
+              <input
+                type="date"
+                id="date"
+                required
+                name="date"
+                [(ngModel)]="formData.date"
+                (ngModelChange)="findDayOfWeek($event)"
+              />
+            </div>
+            <div class="day mt-5 d-flex gap-5 justify-content-center">
+              <label class="font_size_18 d-none d-lg-flex">Day:</label>
+              <input
+                type="text"
+                id="day"
+                required
+                name="day"
+                [(ngModel)]="dayOfWeek"
+              />
+            </div>
 
-          <label>Session:</label>
-          <div class="session-buttons">
-            <button 
-            *ngFor="let session of sessions"
-class="session-btn"
-[ngClass]="{'selected': session === selectedSession}"
-(click)="selectSession(session)"
->
-{{ session | titlecase }}
-</button>
-</div>
-        </div>
-
-           <div class="time"  *ngIf="filteredConsultation ">
-                <label>Time:</label>
-                <input type="time" id="time"  required name="time" [(ngModel)]="filteredConsultation.start_time">
-                
+            <div class="session mt-5 d-flex gap-5 justify-content-start ms-5">
+              <label class="font_size_18 d-none d-lg-flex">Session:</label>
+              <div class="session-buttons">
+                <button
+                  *ngFor="let session of sessions"
+                  class="session-btn"
+                  [ngClass]="{ selected: session === selectedSession }"
+                  (click)="selectSession(session)"
+                >
+                  {{ session | titlecase }}
+                </button>
               </div>
-          
+            </div>
 
+            <div
+              class="time mt-5 d-flex gap-5 justify-content-center"
+              *ngIf="filteredConsultation"
+            >
+              <label class="font_size_18 d-none d-lg-flex">Time:</label>
+              <input
+                type="time"
+                id="time"
+                required
+                name="time"
+                [(ngModel)]="filteredConsultation.start_time"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section mt-5 d-flex justify-content-center">
+          <button class="create-btn width_300" (click)="OnBook_Appoinment()">
+            Create
+          </button>
+        </div>
       </div>
-    
     </div>
-
-    <div class="content-section">
-      <button class="create-btn"  (click)="OnBook_Appoinment()">Create</button>
-  
-    
-        
-    </div>
-  
   </div>
-
-  
+</section>
