@@ -6,7 +6,9 @@
       data-aos="fade-down"
     >
       <div class="logo">
-        <a href="#" class="font_size_40 font_weight_700">X Hospitals</a>
+        <a href="#" class="font_size_40 font_weight_700" routerLink="/ "
+          >X Hospitals</a
+        >
       </div>
       <div class="menu_item d-none d-md-flex">
         <ul class="li_style_none d-flex justify-content-center gap-3">
@@ -14,7 +16,7 @@
           <li><a href="#" class="font_size_25">Services</a></li>
           <li><a href="#" class="font_size_25">Contact</a></li>
           <button (click)="login()">Login</button>
-          <button>Register</button>
+          <button routerLink="/sign-up">Register</button>
         </ul>
       </div>
     </nav>
