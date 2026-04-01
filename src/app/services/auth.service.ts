@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private httpClient: HttpClient) {}
 
   signIn(Email: string, pwd: string): Observable<any> {
-    let url = `${this.API_BASE_DOMAIN}auth/signin`;
+    let url = `${this.API_BASE_DOMAIN}/auth/signin`;
     let data = {
       emailId: Email,
       password: pwd,
