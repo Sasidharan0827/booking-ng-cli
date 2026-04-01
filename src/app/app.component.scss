@@ -1,0 +1,36 @@
+.toast-wrap {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 2000;
+}
+
+.app-toast {
+  min-width: 280px;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.app-toast.success {
+  background: #198754;
+}
+
+.app-toast.warning {
+  background: #dc3545;
+}
+
+.toast-close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}

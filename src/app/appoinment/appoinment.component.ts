@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import * as moment from 'moment';
 import { AppoinmentServiceService } from '../appoinment-service.service';
 import { Consultation } from './appoinmentdto';
+import { ToastService } from '../services/toast.service';
 @Component({
   selector: 'app-appoinment',
   templateUrl: './appoinment.component.html',
@@ -37,7 +38,8 @@ export class AppoinmentComponent {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private appointmentservice: AppoinmentServiceService
+    private appointmentservice: AppoinmentServiceService,
+    private toastService: ToastService
   ) {
     const navigation = this.router.getCurrentNavigation();
     if (navigation && navigation.extras.state) {
@@ -47,6 +49,11 @@ export class AppoinmentComponent {
       console.log('recived user---->', this.user);
       console.log('recived user---->', this.doctor);
       this.formData.userId = this.user?.id;
+    }
+
+    if (!this.user) {
+      this.user = this.authService.getUserData();
+      this.formData.userId = this.user?.id || '';
     }
   }
 
@@ -107,9 +114,19 @@ export class AppoinmentComponent {
   }
 
   OnBook_Appoinment() {
+    if (!this.authService.isLoggedIn()) {
+      this.toastService.show(
+        'Please login before booking an appointment.',
+        'warning'
+      );
+      this.router.navigate(['/sign-in']);
+      return;
+    }
+
     this.formData.con_id = this.filteredConsultation
       ? this.filteredConsultation.con_id
       : null;
+    this.formData.userId = this.user?.id || this.authService.getUserData()?.id || '';
     this.appointmentservice.createAppointment(this.formData).subscribe({
       next: (response) => {
         this.router.navigateByUrl('/response', {

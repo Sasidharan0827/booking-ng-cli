@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:3000',
-  adminBaseUrl: 'http://localhost:4200',
+  apiBaseUrl: 'https://api-nestjs-svr-1.onrender.com/',
+  // apiBaseUrl: 'https://api-nestjs-svr-1.onrender.com/',
+  // adminBaseUrl: 'http://localhost:4200',
 };

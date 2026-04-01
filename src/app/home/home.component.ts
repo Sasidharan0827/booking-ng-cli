@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DoctorService } from '../doctor.service';
 import { AuthService } from '../services/auth.service';
@@ -8,7 +8,7 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   imageUrl = '/assets/doc2.jpg';
   service = '/assets/service.jpg';
 
@@ -18,8 +18,10 @@ export class HomeComponent {
   constructor(
     private doctorService: DoctorService,
     private router: Router,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+  ) {
+    this.fetchDoctors();
+  }
   ngOnInit(): void {
     this.fetchDoctors();
 
@@ -35,9 +37,14 @@ export class HomeComponent {
   }
 
   fetchDoctors() {
-    this.doctorService.getDoctors().subscribe((doctors) => {
-      this.doctors = doctors;
-      console.log(doctors);
+    this.doctorService.getDoctors().subscribe({
+      next: (doctors) => {
+        this.doctors = doctors;
+        console.log('doctors', doctors);
+      },
+      error: (error) => {
+        console.error('Failed to fetch doctors:', error);
+      },
     });
   }
 

@@ -7,7 +7,9 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { ResponseComponent } from './response/response.component';
@@ -18,6 +20,7 @@ import { MissionComponent } from './mission/mission.component';
 import { DocListComponent } from './doc-list/doc-list.component';
 import { OurServiceComponent } from './our-service/our-service.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -35,8 +38,21 @@ import { ContactComponent } from './contact/contact.component';
     OurServiceComponent,
     ContactComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgxSpinnerModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

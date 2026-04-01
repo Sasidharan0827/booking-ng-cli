@@ -1,3 +1,16 @@
-
-
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+>
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+<div *ngIf="toast$ | async as toast" class="toast-wrap">
+  <div class="app-toast" [ngClass]="toast.type">
+    <span>{{ toast.message }}</span>
+    <button type="button" class="toast-close" (click)="clearToast()">x</button>
+  </div>
+</div>
 <router-outlet></router-outlet>

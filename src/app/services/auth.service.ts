@@ -1,64 +1,64 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-
-
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 @Injectable({
-    providedIn: 'root'
-  })
+  providedIn: 'root',
+})
 export class AuthService {
-
-    private token: string | null = null;
+  private token: string | null = null;
   private userData: any = null;
 
-    API_BASE_DOMAIN = 'http://localhost:3000';
+  API_BASE_DOMAIN = environment.apiBaseUrl;
 
-    constructor( private httpClient:HttpClient) {
+  constructor(private httpClient: HttpClient) {}
 
-    
-    }
-    
+  signIn(Email: string, pwd: string): Observable<any> {
+    let url = `${this.API_BASE_DOMAIN}auth/signin`;
+    let data = {
+      emailId: Email,
+      password: pwd,
+    };
+    return this.httpClient.post<any>(url, data);
+  }
 
+  signup(
+    name: string,
+    UserEmail: string,
+    password: string,
+    phone: string,
+    dob: string,
+    address: string,
+  ): Observable<any> {
+    let url = `${this.API_BASE_DOMAIN}/auth/signup`;
+    let data = {
+      name: name,
+      emailId: UserEmail,
+      password: password,
+      phone: phone,
+      dob: dob,
+      address: address,
+    };
+    return this.httpClient.post<any>(url, data);
+  }
+  appoinment(
+    pname: string,
+    date: string,
+    time: string,
+    page: string,
+    phone: string,
+  ) {
+    let url = `${this.API_BASE_DOMAIN}/appoinment`;
+    let data = {
+      pname: pname,
+      date: date,
+      time: time,
+      page: page,
+      phone: phone,
+    };
+    return this.httpClient.post<any>(url, data);
+  }
 
-    signIn(Email:string, pwd:string) :Observable<any> {
-        let url = `${this.API_BASE_DOMAIN}/auth/signin`;
-        let data = {    
-            emailId:Email,
-            password:pwd
-        }
-        return this.httpClient.post<any>(url,data);
-    }
-
-
-
-    signup(name: string, UserEmail: string, password: string,phone:string,dob:string,address:string): Observable<any> {
-        let url = `${this.API_BASE_DOMAIN}/auth/signup`;
-        let data = {
-            name:name,
-            emailId:UserEmail,
-            password: password,
-            phone:phone,
-            dob:dob,
-            address:address
-        
-        };
-        return this.httpClient.post<any>(url, data);
-    }
-    appoinment(pname:string,date:string,time:string,page:string,phone:string){
-        let url = `${this.API_BASE_DOMAIN}/appoinment`;
-        let data = {
-            
-            pname:pname,
-            date:date,
-            time: time,
-            page:page,
-            phone:phone,
-        
-        };
-        return this.httpClient.post<any>(url, data);
-    }
-    
- 
   setSession(token: string, userData: any): void {
     this.token = token;
     this.userData = userData;
@@ -75,7 +75,7 @@ export class AuthService {
   getToken(): string | null {
     return localStorage.getItem('token');
   }
-  
+
   // Add this method to retrieve the user data (NEW METHOD)
   getUserData(): any {
     const userData = localStorage.getItem('user');

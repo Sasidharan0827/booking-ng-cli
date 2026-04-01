@@ -35,9 +35,14 @@ export class DocListComponent {
   }
 
   fetchDoctors() {
-    this.doctorService.getDoctors().subscribe((doctors) => {
-      this.doctors = doctors;
-      console.log(doctors);
+    this.doctorService.getDoctors().subscribe({
+      next: (doctors) => {
+        this.doctors = doctors;
+        console.log(doctors);
+      },
+      error: (error) => {
+        console.error('Failed to fetch doctors:', error);
+      },
     });
   }
 

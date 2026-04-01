@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { state } from '@angular/animations';
+import { ToastService } from '../services/toast.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -12,7 +12,11 @@ import { state } from '@angular/animations';
 export class SignInComponent {
  
   @ViewChild('SIF') signinForm: NgForm | null = null;
-  constructor(private authService: AuthService, private router:Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private toastService: ToastService
+  ) {}
   navigateToSignUp() {
     this.router.navigate(['/sign-up']);
   }
@@ -33,9 +37,9 @@ export class SignInComponent {
 
           localStorage.setItem('token', x.access_token);
           localStorage.setItem('user', JSON.stringify(x.user));
-          this.router.navigate(['/']),{state :{user:x.user},
-        };
-        console.log("passing the user to home page",x.user)
+          this.toastService.show('Login successful.', 'success');
+          this.router.navigate(['/'], { state: { user: x.user } });
+          console.log('passing the user to home page', x.user);
         },
         error: (err) => {
           console.error('error ', err);
