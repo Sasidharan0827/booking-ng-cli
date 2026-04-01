@@ -13,16 +13,16 @@ export class AppoinmentServiceService {
     return this.http.get(`${this.apiurl}doctor/${doctor_id}`);
   }
   getConDetails(appoinmentId: any) {
-    return this.http.get(`${this.apiurl}appoinment/${appoinmentId}`);
+    return this.http.get(`${this.apiurl}/appoinment/${appoinmentId}`);
   }
 
   constructor(private http: HttpClient) {}
-  conUrl = `${this.apiurl}doctor`;
+  conUrl = `${this.apiurl}/doctor`;
   getDayConsultation(doc_id: number, dayOfWeek: string): Observable<any> {
     const url = `${this.conUrl}/${doc_id}/consultations/${dayOfWeek}`;
     return this.http.get(url);
   }
-  private baseUrl = `${this.apiurl}appoinment/`;
+  private baseUrl = `${this.apiurl}/appoinment/`;
   createAppointment(formData: any) {
     return this.http.post(`${this.baseUrl}`, formData);
   }
